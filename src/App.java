@@ -62,4 +62,35 @@ public class App {
 
         return result;
     }
+
+    public static int countEvens(int [] arr){
+
+        int result = 0;
+        for (int i=0;i<arr.length;i++){
+            if(arr[i]%2!=0){
+                result++;
+            }
+        }
+
+        return result;
+    }
+
+    public static int difference(int [] arr){
+        //int result=0;
+        int min =minMaxFind(arr, true);
+        int max =minMaxFind(arr, false);
+        return max-min;
+    }
+
+    public static boolean isZerosNeighbor(int [] arr){
+
+        boolean result = false;
+        for (int i=1;i<arr.length-1;i++){
+            if(arr[i-1]==0 && arr[i+1]==0){
+                result=true;
+            }
+        }
+
+        return result;
+    }
 }
